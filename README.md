@@ -1,3 +1,7 @@
+NAME: GOPIKA A 
+
+REG NO: 212224100017
+
 # FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
@@ -38,18 +42,33 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
-**Procedure**
+![Screenshot 2025-04-21 221754](https://github.com/user-attachments/assets/c96e5c5a-a91f-491e-8ae0-dd0d63208746)
 
-Write the detailed procedure here
+![Screenshot 2025-04-21 221808](https://github.com/user-attachments/assets/65e61683-10ab-46da-9493-4365a8728a75)
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+module exp4(a,b,cin,c,d,bin,sum,cout,difference,bout); 
+input a,b,cin,c,d,bin;
+output sum, cout, difference, bout;
+assign sum=a^b^cin;
+assign cout=(a&b) | (b&cin) | (cin&a);
+assign difference=a^b^bin;
+assign bout=(~a&b) | (bin&(~a))| (bin&~b);
+endmodule
+```
+
 
 **RTL Schematic**
 
+![Screenshot (54)](https://github.com/user-attachments/assets/5d1fbca7-136b-4319-82a0-4df9d70e844b)
+
+
 **Output Timing Waveform**
+
+![Screenshot (55)](https://github.com/user-attachments/assets/5724b298-53b6-4d5f-85e9-58802d9955b4)
+
 
 **Result:**
 
